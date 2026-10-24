@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-white">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System & Preview | Tournoi d'Échecs du 1er Novembre — AUCA Annaba</title>
+
+  <!-- Google Fonts : Cinzel (Hero/Display), Plus Jakarta Sans (Body), Cairo (Arabe Patriotique), JetBrains Mono (Data/Rondes) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Cinzel:wght@700;800;900&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            algeria: {
+              green: '#006233',
+              greenLight: '#008744',
+              red: '#D21034',
+              redDark: '#9e0b25',
+              white: '#FFFFFF',
+            },
+            auca: {
+              royal: '#0B4EA2',
+              royalDark: '#072e61',
+              gold: '#D97706',
+              goldLight: '#F59E0B',
+            },
+            chess: {
+              dark: '#060a12',
+              surface: '#0d1322',
+              border: 'rgba(255, 255, 255, 0.09)'
+            }
+          },
+          fontFamily: {
+            display: ['"Cinzel"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            arabic: ['"Cairo"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --color-dz-green: #006233;
+      --color-dz-red: #D21034;
+      --color-dz-white: #FFFFFF;
+      --color-auca-royal: #0B4EA2;
+      --color-auca-gold: #F59E0B;
+      --color-chess-bg: #060a12;
+      --color-chess-card: #0d1527;
+    }
+
+    body {
+      background-color: var(--color-chess-bg);
+      background-image: 
+        radial-gradient(rgba(0, 98, 51, 0.12) 1px, transparent 1px),
+        radial-gradient(rgba(210, 16, 52, 0.08) 1px, transparent 1px);
+      background-size: 32px 32px, 48px 48px;
+      background-position: 0 0, 16px 16px;
+    }
+
+    .flag-bar {
+      height: 4px;
+      background: linear-gradient(90deg, #006233 0%, #006233 46%, #FFFFFF 46%, #FFFFFF 54%, #D21034 54%, #D21034 100%);
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fef08a 0%, #f59e0b 60%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .patriotic-glow {
+      box-shadow: 0 0 35px -5px rgba(0, 98, 51, 0.35), 0 0 20px -5px rgba(210, 16, 52, 0.25);
+    }
+  </style>
+</head>
+<body class="p-4 sm:p-8 lg:p-12 max-w-6xl mx-auto space-y-16">
+
+  <!-- ========================================================================= -->
+  <!-- EN-TÊTE DU DESIGN SYSTEM                                                  -->
+  <!-- ========================================================================= -->
+  <header class="border-b border-slate-800 pb-8">
+    <div class="flag-bar rounded-full mb-6"></div>
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-algeria-green/20 text-emerald-400 border border-algeria-green/40 text-xs font-bold mb-3">
+          <span>🇩🇿 Direction Artistique : Solennelle & Patriotique (1er Novembre)</span>
+        </div>
+        <h1 class="font-display font-black text-3xl sm:text-4xl text-white tracking-wide uppercase">
+          Design System & Specimen
+        </h1>
+        <p class="text-sm text-slate-400 mt-1 font-sans">
+          Tournoi d'Échecs du 1er Novembre — Club Sportif AUCA Annaba (Café Dardara)
+        </p>
+      </div>
+      <div class="text-right font-arabic">
+        <span class="text-lg text-emerald-400 font-bold block">دورة أول نوفمبر للشطرنج</span>
+        <span class="text-xs text-slate-400 font-sans block mt-0.5">Édition Commémorative Officielle</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 1 : SPÉCIMEN TYPOGRAPHIQUE (4 RÔLES RIGIS PAR LE BOOK)           -->
+  <!-- ========================================================================= -->
+  <section class="space-y-6">
+    <div class="flex items-center gap-3">
+      <span class="w-8 h-8 rounded-lg bg-emerald-600/30 text-emerald-400 font-mono font-bold flex items-center justify-center text-xs">01</span>
+      <h2 class="font-display font-bold text-2xl text-white">Spécimen Typographique</h2>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- 1. Display : Cinzel -->
+      <div class="p-6 rounded-2xl bg-chess-surface border border-chess-border space-y-3">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+          <span class="font-mono text-xs text-amber-400 font-bold">Display / Titres Majeurs</span>
+          <span class="text-xs text-slate-400 font-mono">Cinzel (Google Fonts)</span>
+        </div>
+        <p class="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-wide uppercase leading-tight">
+          TOURNOI DU 1<sup class="lowercase text-lg">er</sup> NOVEMBRE
+        </p>
+        <p class="font-display text-sm text-amber-400 italic">
+          « Les échecs au service de la mémoire de la glorieuse Révolution »
+        </p>
+        <p class="text-xs text-slate-400 leading-relaxed font-sans pt-1">
+          Rationale : Don de noblesse impériale pour le jeu des rois, solennité institutionnelle pour la commémoration nationale algérienne.
+        </p>
+      </div>
+
+      <!-- 2. Arabe Patriotique : Cairo -->
+      <div class="p-6 rounded-2xl bg-chess-surface border border-chess-border space-y-3 text-right">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-2 text-left">
+          <span class="font-mono text-xs text-emerald-400 font-bold">Arabe Officiel / Titres Nationaux</span>
+          <span class="text-xs text-slate-400 font-mono">Cairo (Google Fonts)</span>
+        </div>
+        <p class="font-arabic font-black text-2xl sm:text-3xl text-emerald-400 leading-tight">
+          النادي الرياضي أمل اتحاد أشبال عنابة
+        </p>
+        <p class="font-arabic font-bold text-base text-slate-200">
+          دورة الشطرنج الكبرى بمناسبة عيد الثورة التحريرية المجيدة
+        </p>
+        <p class="text-xs text-slate-400 leading-relaxed font-sans pt-1 text-left">
+          Rationale : Typographie officielle du club AUCA, équilibre parfait entre modernité et calligraphie arabe géométrique.
+        </p>
+      </div>
+
+      <!-- 3. Body : Plus Jakarta Sans -->
+      <div class="p-6 rounded-2xl bg-chess-surface border border-chess-border space-y-3">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+          <span class="font-mono text-xs text-royal-300 font-bold">Body / UI & Instructions</span>
+          <span class="text-xs text-slate-400 font-mono">Plus Jakarta Sans</span>
+        </div>
+        <p class="font-sans text-sm sm:text-base text-slate-200 leading-relaxed">
+          Le tournoi se déroule au Café Dardara à Annaba selon le système suisse en 7 rondes. Chaque joueur bénéficie d'une cadence de 5 minutes avec incrément de 3 secondes par coup. La participation est entièrement gratuite.
+        </p>
+        <p class="text-xs text-slate-400 leading-relaxed pt-1">
+          Rationale : Neutralité soignée, lisibilité maximale dans les WebViews des stories Instagram et sur écrans mobiles 3G/4G.
+        </p>
+      </div>
+
+      <!-- 4. Data & FIDE : JetBrains Mono -->
+      <div class="p-6 rounded-2xl bg-chess-surface border border-chess-border space-y-3">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+          <span class="font-mono text-xs text-red-400 font-bold">Data & Rondes / Tabular Nums</span>
+          <span class="text-xs text-slate-400 font-mono">JetBrains Mono</span>
+        </div>
+        <div class="font-mono text-xs space-y-1.5 p-3 rounded-xl bg-slate-950 border border-slate-800">
+          <div class="flex justify-between text-slate-300">
+            <span>Ronde 1 : 20:00 - 20:20</span>
+            <span class="text-amber-400 font-bold">BLITZ 5m+3s</span>
+          </div>
+          <div class="flex justify-between text-slate-300">
+            <span>Azeddine Mehaibia</span>
+            <span class="text-emerald-400">ID FIDE: 7900198</span>
+          </div>
+          <div class="flex justify-between text-slate-300">
+            <span>Lakhdar Benlaid</span>
+            <span class="text-emerald-400">ID FIDE: 7903413</span>
+          </div>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed pt-1">
+          Rationale : Alignement parfait des chiffres et horaires sans décalage visuel, look technique d'arbitrage FIDE.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 2 : PALETTE OFFICIELLE & COMPOSANTS UI                              -->
+  <!-- ========================================================================= -->
+  <section class="space-y-6">
+    <div class="flex items-center gap-3">
+      <span class="w-8 h-8 rounded-lg bg-red-600/30 text-red-400 font-mono font-bold flex items-center justify-center text-xs">02</span>
+      <h2 class="font-display font-bold text-2xl text-white">Palette Patriotique & Composants UI</h2>
+    </div>
+
+    <!-- Swatches -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+      
+      <div class="p-3 rounded-xl bg-chess-surface border border-chess-border text-center space-y-2">
+        <div class="h-14 rounded-lg bg-[#006233] border border-white/10 shadow-sm flex items-center justify-center text-white font-mono text-xs font-bold">#006233</div>
+        <p class="text-xs font-bold text-white">Vert Algérie</p>
+        <span class="text-[10px] text-slate-400 font-mono block">Drapeau & Éléments</span>
+      </div>
+
+      <div class="p-3 rounded-xl bg-chess-surface border border-chess-border text-center space-y-2">
+        <div class="h-14 rounded-lg bg-[#D21034] border border-white/10 shadow-sm flex items-center justify-center text-white font-mono text-xs font-bold">#D21034</div>
+        <p class="text-xs font-bold text-white">Rouge Révolution</p>
+        <span class="text-[10px] text-slate-400 font-mono block">Étoile & Croissant</span>
+      </div>
+
+      <div class="p-3 rounded-xl bg-chess-surface border border-chess-border text-center space-y-2">
+        <div class="h-14 rounded-lg bg-[#FFFFFF] border border-white/10 shadow-sm flex items-center justify-center text-slate-950 font-mono text-xs font-bold">#FFFFFF</div>
+        <p class="text-xs font-bold text-white">Blanc Étoile</p>
+        <span class="text-[10px] text-slate-400 font-mono block">Pureté & Contrastes</span>
+      </div>
+
+      <div class="p-3 rounded-xl bg-chess-surface border border-chess-border text-center space-y-2">
+        <div class="h-14 rounded-lg bg-[#0B4EA2] border border-white/10 shadow-sm flex items-center justify-center text-white font-mono text-xs font-bold">#0B4EA2</div>
+        <p class="text-xs font-bold text-white">Bleu Royal AUCA</p>
+        <span class="text-[10px] text-slate-400 font-mono block">Blason officiel Club</span>
+      </div>
+
+      <div class="p-3 rounded-xl bg-chess-surface border border-chess-border text-center space-y-2">
+        <div class="h-14 rounded-lg bg-[#F59E0B] border border-white/10 shadow-sm flex items-center justify-center text-slate-950 font-mono text-xs font-bold">#F59E0B</div>
+        <p class="text-xs font-bold text-white">Or Victoire</p>
+        <span class="text-[10px] text-slate-400 font-mono block">Trophées & Badges</span>
+      </div>
+
+      <div class="p-3 rounded-xl bg-chess-surface border border-chess-border text-center space-y-2">
+        <div class="h-14 rounded-lg bg-[#060a12] border border-slate-700 shadow-sm flex items-center justify-center text-slate-400 font-mono text-xs font-bold">#060A12</div>
+        <p class="text-xs font-bold text-white">Noir Échiquier</p>
+        <span class="text-[10px] text-slate-400 font-mono block">Fond Nuit de Jeu</span>
+      </div>
+
+    </div>
+
+    <!-- Composants UI appliqués -->
+    <div class="p-6 rounded-2xl bg-chess-surface border border-chess-border space-y-6">
+      
+      <!-- Boutons -->
+      <div>
+        <p class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider mb-3">Boutons & CTA</p>
+        <div class="flex flex-wrap items-center gap-3">
+          <button class="px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-algeria-green hover:from-emerald-500 hover:to-emerald-600 text-white font-black text-xs uppercase tracking-wider shadow-lg active:scale-95 transition-all">
+            CTA Patriotique (Vert Algérie)
+          </button>
+          <button class="px-5 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider active:scale-95 transition-all">
+            CTA Trophée (Or Échiquier)
+          </button>
+          <button class="px-5 py-3 rounded-xl bg-royal-600 hover:bg-royal-500 text-white font-bold text-xs uppercase tracking-wider active:scale-95 transition-all">
+            CTA Club (Bleu AUCA)
+          </button>
+          <button class="px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 hover:text-white font-bold text-xs uppercase tracking-wider transition-all">
+            Bouton Ghost
+          </button>
+        </div>
+      </div>
+
+      <!-- Inputs -->
+      <div>
+        <p class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider mb-3">Champs de Formulaire (États)</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-300 mb-1">Défaut</label>
+            <input type="text" value="Mohamed Benali" class="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs font-sans">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-emerald-400 mb-1">Focus (Actif)</label>
+            <input type="text" value="0669 54 66 80" class="w-full px-3 py-2 rounded-xl bg-slate-900 border-2 border-emerald-500 text-white text-xs font-sans ring-2 ring-emerald-500/20">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-red-400 mb-1">Erreur</label>
+            <input type="text" value="Champ requis manquant" class="w-full px-3 py-2 rounded-xl bg-slate-900 border-2 border-red-500 text-red-300 text-xs font-sans">
+          </div>
+        </div>
+      </div>
+
+      <!-- Alertes & Badges -->
+      <div>
+        <p class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider mb-3">Bannières & Notifications Sémantiques</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="p-3 rounded-xl bg-emerald-950/40 border border-emerald-600/40 text-emerald-300 text-xs flex items-center gap-2">
+            <span>🇩🇿</span>
+            <span><strong>Commémoration Officielle :</strong> Participation 100% gratuite au Café Dardara.</span>
+          </div>
+          <div class="p-3 rounded-xl bg-amber-950/40 border border-amber-600/40 text-amber-300 text-xs flex items-center gap-2">
+            <span>⏰</span>
+            <span><strong>Clôture Inscriptions :</strong> 20h00 précises pour le tirage de la ronde 1.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 3 : MOCKUP D'ÉCRAN — TOURNOI DU 1ER NOVEMBRE & PASS STORY        -->
+  <!-- ========================================================================= -->
+  <section class="space-y-6">
+    <div class="flex items-center gap-3">
+      <span class="w-8 h-8 rounded-lg bg-amber-500/30 text-amber-400 font-mono font-bold flex items-center justify-center text-xs">03</span>
+      <h2 class="font-display font-bold text-2xl text-white">Mockup d'Écran : Vitrine Patriotique & Pass Story</h2>
+    </div>
+
+    <!-- Le Mockup Réaliste -->
+    <div class="p-6 sm:p-10 rounded-3xl bg-slate-950 border-2 border-algeria-green/40 patriotic-glow relative overflow-hidden">
+      
+      <!-- Ruban tricolore en haut de carte -->
+      <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-algeria-green via-white to-algeria-red"></div>
+
+      <div class="max-w-3xl mx-auto space-y-8 text-center pt-4">
+        
+        <!-- Badge Héros -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 border border-emerald-500/30 text-xs text-emerald-300">
+          <span class="text-base">🇩🇿</span>
+          <span class="font-arabic font-bold text-sm">ذكرى أول نوفمبر 1954 المجيدة</span>
+          <span class="text-slate-500">|</span>
+          <span class="font-mono text-amber-400 font-bold">AUCA ANNABA</span>
+        </div>
+
+        <!-- Titre Hero Mockup -->
+        <h3 class="font-display font-black text-3xl sm:text-5xl text-white tracking-wide uppercase leading-tight">
+          TOURNOI D’ÉCHECS DU <br>
+          <span class="gold-gradient-text">1<sup class="lowercase text-2xl">er</sup> NOVEMBRE</span>
+        </h3>
+
+        <p class="font-sans text-sm sm:text-base text-slate-300 italic max-w-xl mx-auto">
+          « Les échecs au service de la mémoire du 1er Novembre »
+        </p>
+
+        <!-- Mini grille de caractéristiques -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
+          <div class="p-3 rounded-xl bg-slate-900/90 border-l-4 border-l-emerald-500">
+            <span class="text-[10px] text-slate-400 block uppercase">Lieu</span>
+            <strong class="text-white text-xs sm:text-sm">Café Dardara</strong>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/90 border-l-4 border-l-red-500">
+            <span class="text-[10px] text-slate-400 block uppercase">Cadence</span>
+            <strong class="text-white text-xs sm:text-sm">5m + 3s Blitz</strong>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/90 border-l-4 border-l-amber-500">
+            <span class="text-[10px] text-slate-400 block uppercase">Format</span>
+            <strong class="text-white text-xs sm:text-sm">7 Rondes Suisse</strong>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900/90 border-l-4 border-l-royal-500">
+            <span class="text-[10px] text-slate-400 block uppercase">Entrée</span>
+            <strong class="text-emerald-400 text-xs sm:text-sm">100% Gratuite</strong>
+          </div>
+        </div>
+
+        <!-- Le Pass Joueur Numérique (Format Story 9:16 compact) -->
+        <div class="max-w-xs mx-auto p-5 rounded-2xl bg-gradient-to-b from-[#0a1424] to-[#040810] border-2 border-emerald-500/50 shadow-2xl relative text-left space-y-3">
+          <div class="flex items-center justify-between border-b border-white/10 pb-2">
+            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Pass Officiel Joueur</span>
+            <span class="text-xs">🇩🇿 AUCA</span>
+          </div>
+          <div>
+            <span class="text-[9px] uppercase tracking-wider text-slate-400 block">Nom du Participant</span>
+            <p class="font-display font-black text-lg text-white">YACINE MEZIANI</p>
+            <span class="font-mono text-[10px] text-emerald-400 block">FIDE ID: 7904128 • Elo 1650</span>
+          </div>
+          <div class="p-2 rounded-lg bg-black/40 text-[11px] text-slate-300 flex justify-between">
+            <span>Émargement : <strong>19h00</strong></span>
+            <span>Table : <strong>Café Dardara</strong></span>
+          </div>
+          <div class="pt-2 border-t border-white/10 flex justify-between text-[10px] font-mono text-slate-400">
+            <span>#AUCA-NOV-042</span>
+            <span>||||| || ||||</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- PIED DU DESIGN SYSTEM                                                     -->
+  <!-- ========================================================================= -->
+  <footer class="text-center text-xs text-slate-500 border-t border-slate-800 pt-6">
+    <p>Design System officiel conçu pour le Club Sportif AUCA Annaba — Édition Fête Nationale du 1er Novembre.</p>
+  </footer>
+
+</body>
+</html>

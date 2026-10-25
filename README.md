@@ -41,7 +41,7 @@ Pour que le site soit **centralisé et techniquement irréprochable**, chaque fo
    - Téléphone
    - Email
    - Identifiant FIDE / Elo
-2. **Sur le site dans l'Espace Arbitres** (accessible via le bouton discret en bas de page ou le raccourci `Ctrl + Shift + A`) pour un export CSV immédiat incluant Ville et Club.
+2. **Sur le site dans l'Espace Arbitres** (accessible via le bouton discret en bas de page ou le raccourci `Ctrl + Shift + A`, protégé par le mot de passe organisateur) pour un export CSV immédiat incluant Ville et Club.
 3. **Statistiques en direct via Umami Analytics** : Suivez le nombre de visites depuis les Stories Instagram / Facebook, le téléchargement des Pass Joueur et les inscriptions en direct sur votre tableau de bord Umami Cloud.
 
 ---

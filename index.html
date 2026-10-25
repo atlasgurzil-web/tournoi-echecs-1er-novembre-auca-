@@ -48,12 +48,6 @@
               gold: '#D97706',
               goldLight: '#F59E0B',
             },
-            auca: {
-              royal: '#1E3A8A',
-              royalDark: '#0f172a',
-              gold: '#D97706',
-              goldLight: '#F59E0B',
-            },
             chess: {
               dark: '#060A12',
               card: '#0D1527',
@@ -1041,9 +1035,7 @@
   <script>
     // Configuration de la base de données Cloud
     const STORAGE_KEY = 'cercle_des_rois_registrations';
-    const LEGACY_STORAGE_KEY = 'auca_tournament_registrations';
     const GOOGLE_SHEET_KEY = 'cercle_des_rois_google_sheet_url';
-    const LEGACY_SHEET_KEY = 'auca_google_sheet_url';
     // URL officielle de votre Google Sheet Cloud (100% active et testée)
     const DEFAULT_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxX_cs2z3rMrEnmmCWy5T72wGUqAIZV2AqcfExgigcXSaDedXUDJxM8g419NZp-rM59/exec'; 
 
@@ -1056,7 +1048,7 @@
     });
 
     document.addEventListener('DOMContentLoaded', () => {
-      const savedUrl = localStorage.getItem(GOOGLE_SHEET_KEY) || localStorage.getItem(LEGACY_SHEET_KEY) || DEFAULT_WEBHOOK_URL;
+      const savedUrl = localStorage.getItem(GOOGLE_SHEET_KEY) || DEFAULT_WEBHOOK_URL;
       if (savedUrl) {
         const input = document.getElementById('google-sheet-url');
         if (input) input.value = savedUrl;
@@ -1141,7 +1133,7 @@
         body: JSON.stringify(registrationData)
       }).catch(() => {});
 
-      const targetSheetUrl = localStorage.getItem(GOOGLE_SHEET_KEY) || localStorage.getItem(LEGACY_SHEET_KEY) || DEFAULT_WEBHOOK_URL;
+      const targetSheetUrl = localStorage.getItem(GOOGLE_SHEET_KEY) || DEFAULT_WEBHOOK_URL;
       if (targetSheetUrl) {
         fetch(targetSheetUrl, {
           method: 'POST',
@@ -1157,8 +1149,6 @@
     function getLocalRegistrations() {
       const current = localStorage.getItem(STORAGE_KEY);
       if (current) return JSON.parse(current);
-      const legacy = localStorage.getItem(LEGACY_STORAGE_KEY);
-      if (legacy) return JSON.parse(legacy);
       return [];
     }
 
@@ -1401,7 +1391,6 @@
     function clearAllRegistrations() {
       if (confirm('Êtes-vous sûr de vouloir réinitialiser la liste locale des inscrits ?')) {
         localStorage.removeItem(STORAGE_KEY);
-        localStorage.removeItem(LEGACY_STORAGE_KEY);
         renderAdminTable();
       }
     }

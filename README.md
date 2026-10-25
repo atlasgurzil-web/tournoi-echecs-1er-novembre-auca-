@@ -82,8 +82,8 @@ Le projet est configuré nativement pour Vercel grâce au fichier [`vercel.json`
 ## 📁 FICHIERS DU PROJET
 
 - [**`index.html`**](./index.html) : La page web officielle du tournoi Le Cercle des Rois 4 avec visuels héroïques IA, formulaire optimisé mobile, et génération du Pass Joueur Story.
-- [**`logo-cercle-des-rois.png`**](./logo-cercle-des-rois.png) : Emblème royal officiel du Cercle des Rois (Roi d'échecs, couronne impériale dorée et médaillon patriotique algérien).
-- [**`logo-cercle-des-rois.svg`**](./logo-cercle-des-rois.svg) : Version vectorielle SVG haute définition du blason du Cercle des Rois.
+- [**`drapeau-algerie.png`**](./drapeau-algerie.png) : Emblème officiel du Drapeau de l'Algérie (médaillon haute définition).
+- [**`drapeau-algerie.svg`**](./drapeau-algerie.svg) : Version vectorielle SVG du Drapeau de l'Algérie avec croissant et étoile.
 - [**`api/register.js`**](./api/register.js) : Fonction API Serverless Vercel sécurisée.
 - [**`vercel.json`**](./vercel.json) : Configuration officielle de déploiement et de sécurité Vercel.
 - [**`google-apps-script.js`**](./google-apps-script.js) : Le code prêt à coller pour votre base Google Sheets.

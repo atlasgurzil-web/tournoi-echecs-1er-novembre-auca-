@@ -11,7 +11,7 @@
 - **Direction** : Royal Grandmaster & National Pride (Le Cercle des Rois — Hommage au 1er Novembre).
 - **Décoration** : Expressif & Cinématique (illustrations IA de choc tactique d'échecs sur fond du drapeau national, rubans tricolores algériens en dégradé, textures d'échiquier nocturnes, emblème royal du Roi couronné doré, croissants et étoiles lumineux, badges dorés FIDE).
 - **Visuels générés & Blasons** :
-  - `logo-cercle-des-rois.svg` & `logo-cercle-des-rois.png` : Emblème royal officiel (Roi d'échecs ciselé, couronne impériale dorée, lauriers d'or et médaillon patriotique Vert, Rouge, Blanc).
+  - `drapeau-algerie.svg` & `drapeau-algerie.png` : Drapeau officiel de l'Algérie en médaillon circulaire haute définition (croissant et étoile rouges sur fond vert et blanc).
   - `hero-chess-algeria.jpg` (16:9) : Échiquier monumental en marbre sombre embrumé de braises dorées, dominé par un Roi en or ciselé et un Cavalier dynamique, sous les rayons volumétriques du drapeau algérien.
   - `story-chess-algeria.jpg` (9:16 portrait) : Gros plan dramatique d'une reine en onyx et d'un cavalier doré face à face avec halos vert émeraude et rouge rubis, utilisé pour le Pass Joueur Story.
 - **Mood** : Royal, épique, solennel, combattif et rassembleur.

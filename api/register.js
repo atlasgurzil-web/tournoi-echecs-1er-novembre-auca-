@@ -40,6 +40,8 @@ export default async function handler(req, res) {
       timestamp: sanitize(data.timestamp || new Date().toISOString(), 35),
       name: sanitize(data.name, 80),
       firstname: sanitize(data.firstname, 80),
+      city: sanitize(data.city, 80),
+      club: sanitize(data.club, 80),
       phone: sanitize(data.phone, 30),
       email: sanitize(data.email, 100),
       fide: sanitize(data.fide, 60)

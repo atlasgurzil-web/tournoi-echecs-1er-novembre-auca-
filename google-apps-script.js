@@ -35,13 +35,15 @@ function doPost(e) {
         "Date & Heure",
         "Nom / Pseudo",
         "Prénom",
+        "Ville / Wilaya",
+        "Club",
         "Téléphone",
         "Adresse Email",
-        "Identifiant FIDE / Club / Elo"
+        "Identifiant FIDE / Elo"
       ]);
       
       // Mise en forme de la première ligne
-      var headerRange = sheet.getRange(1, 1, 1, 7);
+      var headerRange = sheet.getRange(1, 1, 1, 9);
       headerRange.setBackground("#0B4EA2");
       headerRange.setFontColor("#FFFFFF");
       headerRange.setFontWeight("bold");
@@ -56,6 +58,8 @@ function doPost(e) {
       data.timestamp || new Date().toLocaleString(),
       data.name || "",
       data.firstname || "",
+      data.city || "",
+      data.club || "",
       data.phone || "",
       data.email || "",
       data.fide || ""

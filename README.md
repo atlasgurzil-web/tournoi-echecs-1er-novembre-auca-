@@ -36,10 +36,13 @@ Pour que le site soit **centralisé et techniquement irréprochable**, chaque fo
    - Date et Heure
    - Nom complet ou Pseudo
    - Prénom
+   - Ville / Wilaya
+   - Club d'échecs
    - Téléphone
    - Email
-   - Identifiant FIDE / Elo / Club
-2. **Sur le site dans l'Espace Arbitres** (accessible via le bouton discret en bas de page ou le raccourci `Ctrl + Shift + A`) pour un export CSV immédiat.
+   - Identifiant FIDE / Elo
+2. **Sur le site dans l'Espace Arbitres** (accessible via le bouton discret en bas de page ou le raccourci `Ctrl + Shift + A`) pour un export CSV immédiat incluant Ville et Club.
+3. **Statistiques en direct via Umami Analytics** : Suivez le nombre de visites depuis les Stories Instagram / Facebook, le téléchargement des Pass Joueur et les inscriptions en direct sur votre tableau de bord Umami Cloud.
 
 ---
 

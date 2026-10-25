@@ -26,6 +26,25 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Le champ Nom ou Pseudo est requis.' });
     }
 
+    // Validation et assainissement des entrées (Défense en profondeur)
+    const sanitize = (val, maxLen) => {
+      if (!val || typeof val !== 'string') return '';
+      let s = val.trim().slice(0, maxLen);
+      // Préfixe anti-formule si injection suspecte
+      if (/^[=\+\-@]/.test(s)) s = "'" + s;
+      return s;
+    };
+
+    const sanitizedPayload = {
+      id: sanitize(data.id || 'AUCA-' + Math.floor(Math.random() * 900 + 100), 20),
+      timestamp: sanitize(data.timestamp || new Date().toISOString(), 35),
+      name: sanitize(data.name, 80),
+      firstname: sanitize(data.firstname, 80),
+      phone: sanitize(data.phone, 30),
+      email: sanitize(data.email, 100),
+      fide: sanitize(data.fide, 60)
+    };
+
     // 1. Relais automatique vers Google Sheets
     const webhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL || 'https://script.google.com/macros/s/AKfycbxX_cs2z3rMrEnmmCWy5T72wGUqAIZV2AqcfExgigcXSaDedXUDJxM8g419NZp-rM59/exec';
     let sheetSynced = false;
@@ -35,7 +54,7 @@ export default async function handler(req, res) {
         const response = await fetch(webhookUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
+          body: JSON.stringify(sanitizedPayload)
         });
         sheetSynced = response.ok;
       } catch (err) {

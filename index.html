@@ -1081,6 +1081,16 @@
       });
     }
 
+    // Sécurisation anti-injection CSV (OWASP Formula Injection Defense)
+    function cleanCsvCell(val) {
+      if (!val || val === '-') return '';
+      let s = String(val).trim();
+      if (/^[=\+\-@\t\r]/.test(s)) {
+        s = "'" + s;
+      }
+      return s.replace(/"/g, '""');
+    }
+
     function exportToCSV() {
       const list = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
       if (list.length === 0) {
@@ -1090,7 +1100,7 @@
 
       let csv = 'Numero,Nom,Prenom,Telephone,Email,FIDE_Club,Date_Inscription\n';
       list.forEach((p, idx) => {
-        csv += `"${idx + 1}","${p.name}","${p.firstname}","${p.phone}","${p.email}","${p.fide}","${p.timestamp}"\n`;
+        csv += `"${idx + 1}","${cleanCsvCell(p.name)}","${cleanCsvCell(p.firstname)}","${cleanCsvCell(p.phone)}","${cleanCsvCell(p.email)}","${cleanCsvCell(p.fide)}","${cleanCsvCell(p.timestamp)}"\n`;
       });
 
       const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });

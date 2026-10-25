@@ -1,8 +1,8 @@
-# 🏆 Tournoi d'Échecs du 1er Novembre 🇩🇿 — AUCA Annaba (Café Dardara)
+# 🏆 Le Cercle des Rois 4 🇩🇿 — Tournoi d'Échecs à Annaba (Café Dardara)
 
-Page d'inscription officielle et moderne, conçue pour être partagée en **Story Instagram**, Facebook, WhatsApp ou via un lien direct hébergé sur **Vercel**.
+Page d'inscription officielle et moderne pour la 4ème édition du tournoi **Le Cercle des Rois**, organisée en hommage au **1er Novembre 1954**. Conçue pour être partagée en **Story Instagram**, Facebook, WhatsApp ou via un lien direct hébergé sur **Vercel**.
 
-Inspirée fidèlement de l'identité officielle du club d'échecs de l'**AUCA Annaba** (*Club Sportif Amal Itihad Achbal Annaba* - `https://aucaechecs.atlasforge.space`).
+Organisé par le club d'échecs **Le Cercle des Rois** (Annaba) dans l'arène conviviale du **Café Dardara**, le **Jeudi 29 Octobre 2026**.
 
 ---
 
@@ -11,10 +11,10 @@ Inspirée fidèlement de l'identité officielle du club d'échecs de l'**AUCA An
 Lorsque votre site est en ligne sur **Vercel**, des dizaines de joueurs vont cliquer sur votre lien depuis leur téléphone portable via Instagram ou Facebook :
 
 ### 1. Pourquoi le stockage "local" (localStorage) ne suffit pas en production ?
-Le `localStorage` stocke les informations **uniquement dans la mémoire du téléphone du visiteur**. Si Mohamed s'inscrit sur son iPhone, les données restent sur son iPhone. L'organisateur AUCA sur son ordinateur ou son propre téléphone ne verrait rien !
+Le `localStorage` stocke les informations **uniquement dans la mémoire du téléphone du visiteur**. Si un joueur s'inscrit sur son smartphone, les données restent sur son appareil. L'organisateur sur son ordinateur ou son propre téléphone ne verrait rien sans synchronisation cloud !
 
 ### 2. Où sont réellement stockées les données en production ?
-Pour que le site soit **centralisé et techniquement irréprochable**, chaque fois qu'un joueur clique sur *« Valider mon Inscription »*, le site envoie une requête vers **votre Base de Données Cloud Google Sheets** (ou l'API Serverless Vercel `/api/register`).
+Pour que le site soit **centralisé et techniquement irréprochable**, chaque fois qu'un joueur clique sur *« Valider mon Inscription & Générer mon Pass »*, le site envoie une requête vers **votre Base de Données Cloud Google Sheets** (ou l'API Serverless Vercel `/api/register`).
 
 **Le chemin des données est le suivant :**
 ```text
@@ -27,12 +27,12 @@ Pour que le site soit **centralisé et techniquement irréprochable**, chaque fo
 [ Votre Tableur Google Sheets Privé sur Google Drive ]
                    │
                    ▼ (Consultation en direct)
-[ Les Arbitres de l'AUCA au Café Dardara ] ──► [ Export Swiss-Manager / Sevilla ]
+[ Les Arbitres du Cercle des Rois au Café Dardara ] ──► [ Export Swiss-Manager / Sevilla ]
 ```
 
 ### 3. Où l'organisateur consulte-t-il les inscriptions ?
 1. **Directement dans votre Google Sheets** : Vous ouvrez votre Google Sheet sur votre PC ou via l'application Google Sheets sur votre téléphone. Chaque nouvelle inscription apparaît en temps réel à la seconde près avec :
-   - ID Dossard (`#AUCA-XXX`)
+   - ID Dossard (`#CDR-XXX`)
    - Date et Heure
    - Nom complet ou Pseudo
    - Prénom
@@ -49,7 +49,7 @@ Pour que le site soit **centralisé et techniquement irréprochable**, chaque fo
 ## ⚡ MISE EN PLACE DE VOTRE BASE CLOUD EN 2 MINUTES CHRONO
 
 1. Rendez-vous sur [Google Sheets](https://sheets.google.com) et créez une nouvelle feuille vide.
-2. Renommez-la : **« Inscriptions Tournoi AUCA 1er Novembre »**.
+2. Renommez-la : **« Inscriptions Le Cercle des Rois 4 »**.
 3. Dans le menu en haut, cliquez sur **Extensions** > **Apps Script**.
 4. Effacez le code existant, ouvrez le fichier [`google-apps-script.js`](./google-apps-script.js) de ce projet, copiez tout son contenu et collez-le dans l'éditeur Google.
 5. Cliquez sur **Enregistrer** (l'icône de disquette 💾).
@@ -62,7 +62,7 @@ Pour que le site soit **centralisé et techniquement irréprochable**, chaque fo
 10. Copiez l'**URL de l'application Web** fournie (elle se termine par `/exec`).
 
 **Deux manières de lier cette URL à votre site :**
-- **Option Simple (dans le code) :** Ouvrez [`index.html`](./index.html), cherchez la ligne `const DEFAULT_WEBHOOK_URL = '';` (ligne ~886) et collez votre URL entre les guillemets : `const DEFAULT_WEBHOOK_URL = 'https://script.google.com/macros/s/.../exec';`.
+- **Option Simple (dans la console Arbitre) :** Ouvrez la console (`Ctrl + Shift + A`), collez l'URL dans le champ "URL Webhook Google Apps Script", puis cliquez sur "Enregistrer".
 - **Option Variable Vercel :** Dans votre tableau de bord Vercel > Settings > Environment Variables, ajoutez `GOOGLE_SHEET_WEBHOOK_URL` avec votre URL.
 
 ---
@@ -75,17 +75,18 @@ Le projet est configuré nativement pour Vercel grâce au fichier [`vercel.json`
 2. Connectez votre compte GitHub et importez ce dépôt (ou glissez-déposez le dossier complet sur le CLI Vercel `npx vercel`).
 3. Vercel va automatiquement détecter le site statique et l'API Serverless.
 4. Cliquez sur **Deploy**.
-5. Vous obtenez immédiatement votre lien public HTTPS sécurisé (ex: `https://tournoi-echecs-auca.vercel.app`), prêt à être partagé en Story Instagram !
+5. Vous obtenez immédiatement votre lien public HTTPS sécurisé (ex: `https://cercle-des-rois-4.vercel.app`), prêt à être partagé en Story Instagram !
 
 ---
 
-## 📁 FICHIERS LIVRÉS DANS LE PROJET
+## 📁 FICHIERS DU PROJET
 
-- [**`index.html`**](./index.html) : La page web officielle du tournoi avec visuels cinématiques IA, formulaire sans bouton de contact parasite, et génération du Pass Joueur.
+- [**`index.html`**](./index.html) : La page web officielle du tournoi Le Cercle des Rois 4 avec visuels héroïques IA, formulaire optimisé mobile, et génération du Pass Joueur Story.
+- [**`logo-cercle-des-rois.png`**](./logo-cercle-des-rois.png) : Emblème royal officiel du Cercle des Rois (Roi d'échecs, couronne impériale dorée et médaillon patriotique algérien).
+- [**`logo-cercle-des-rois.svg`**](./logo-cercle-des-rois.svg) : Version vectorielle SVG haute définition du blason du Cercle des Rois.
 - [**`api/register.js`**](./api/register.js) : Fonction API Serverless Vercel sécurisée.
 - [**`vercel.json`**](./vercel.json) : Configuration officielle de déploiement et de sécurité Vercel.
 - [**`google-apps-script.js`**](./google-apps-script.js) : Le code prêt à coller pour votre base Google Sheets.
 - [**`hero-chess-algeria.jpg`**](./hero-chess-algeria.jpg) : Visuel cinématique 16:9 de la bataille d'échecs sous le drapeau algérien.
 - [**`story-chess-algeria.jpg`**](./story-chess-algeria.jpg) : Visuel 9:16 pour le Pass Joueur Story Instagram.
-- [**`logo-auca-lion.jpg`**](./logo-auca-lion.jpg) : Blason officiel du club AUCA au Lion.
 - [**`docs/DESIGN.md`**](./docs/DESIGN.md) : Spécifications complètes du design system.

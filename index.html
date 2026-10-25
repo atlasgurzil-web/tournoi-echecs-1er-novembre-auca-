@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Tournoi d'Échecs du 1er Novembre 🇩🇿 | AUCA Annaba — Café Dardara</title>
+  <title>Tournoi d'Échecs Le Cercle des Rois 4 🇩🇿 | Hommage au 1er Novembre • Café Dardara - Annaba</title>
   
   <!-- SEO & Social Meta Tags (Optimisé pour les partages Story Instagram & Facebook) -->
-  <meta name="description" content="Participez à la grande bataille échiquéenne du 1er Novembre organisée par l'AUCA Annaba au Café Dardara. 7 rondes système suisse, cadence 5 min + 3 sec. Inscription gratuite.">
-  <meta property="og:title" content="Tournoi d'Échecs du 1er Novembre 🇩🇿 | La Grande Bataille AUCA">
-  <meta property="og:description" content="Une confrontation échiquéenne épique au Café Dardara à l'occasion de la fête nationale. 7 rondes système suisse. Inscription gratuite en ligne.">
+  <meta name="description" content="Participez à la 4ème édition du tournoi Le Cercle des Rois en hommage au 1er Novembre au Café Dardara à Annaba. Jeudi 29 Octobre 2026. 7 rondes système suisse, cadence blitz 5 min + 3 sec. Inscription gratuite.">
+  <meta property="og:title" content="Le Cercle des Rois 4 🇩🇿 | Grand Tournoi d'Échecs à Annaba">
+  <meta property="og:description" content="4ème Édition du Tournoi du Cercle des Rois en hommage au 1er Novembre. Jeudi 29 Octobre au Café Dardara. 7 rondes système suisse. Inscription gratuite en ligne.">
   <meta property="og:image" content="hero-chess-algeria.jpg">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#006233">
 
-  <link rel="icon" type="image/jpeg" href="logo-auca-lion.jpg">
+  <link rel="icon" type="image/png" href="logo-cercle-des-rois.png">
 
   <!-- Google Fonts : Cinzel (Majesté impériale), Cairo (Arabe patriotique), JetBrains Mono (Data FIDE), Plus Jakarta Sans (Corps) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,9 +42,15 @@
               redDark: '#9e0b25',
               white: '#FFFFFF',
             },
+            cercle: {
+              royal: '#1E3A8A',
+              royalDark: '#0f172a',
+              gold: '#D97706',
+              goldLight: '#F59E0B',
+            },
             auca: {
-              royal: '#0B4EA2', // Bleu officiel AUCA
-              royalDark: '#072d5f',
+              royal: '#1E3A8A',
+              royalDark: '#0f172a',
               gold: '#D97706',
               goldLight: '#F59E0B',
             },
@@ -63,7 +69,7 @@
           boxShadow: {
             'patriotic': '0 0 35px -5px rgba(0, 98, 51, 0.4), 0 0 25px -5px rgba(210, 16, 52, 0.3)',
             'gold-glow': '0 0 35px -5px rgba(245, 158, 11, 0.5)',
-            'royal-glow': '0 0 25px -5px rgba(11, 78, 162, 0.4)',
+            'royal-glow': '0 0 25px -5px rgba(30, 58, 138, 0.4)',
             'pass': '0 30px 60px -12px rgba(0, 0, 0, 0.9)',
           }
         }
@@ -152,24 +158,24 @@
   <div class="flag-bar w-full"></div>
 
   <!-- ========================================================================= -->
-  <!-- 1. EN-TÊTE OFFICIEL AUCA & PATRIOTIQUE (STICKY)                           -->
+  <!-- 1. EN-TÊTE OFFICIEL LE CERCLE DES ROIS & PATRIOTIQUE (STICKY)             -->
   <!-- ========================================================================= -->
   <header class="sticky top-0 z-40 bg-[#060A12]/95 backdrop-blur-md border-b border-algeria-green/30 shadow-lg">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
       
-      <!-- Logo + Titre AUCA -->
+      <!-- Logo + Titre Le Cercle des Rois -->
       <a href="#accueil" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded-xl p-1">
         <div class="relative shrink-0">
-          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full p-0.5 bg-gradient-to-tr from-algeria-green via-auca-gold to-auca-royal shadow-patriotic group-hover:scale-105 transition-transform duration-200">
-            <img src="logo-auca-lion.jpg" alt="Blason AUCA Annaba" class="w-full h-full object-cover rounded-full bg-slate-900" onerror="this.src='https://aucaechecs.atlasforge.space/logo-auca-lion.jpg'">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full p-0.5 bg-gradient-to-tr from-algeria-green via-amber-400 to-emerald-600 shadow-patriotic group-hover:scale-105 transition-transform duration-200">
+            <img src="logo-cercle-des-rois.png" alt="Blason Le Cercle des Rois Annaba" class="w-full h-full object-cover rounded-full bg-slate-900" onerror="this.src='logo-cercle-des-rois.svg'">
           </div>
         </div>
         <div class="flex flex-col">
           <div class="flex items-center gap-2">
-            <span class="font-display font-black text-sm sm:text-base tracking-wider text-white group-hover:text-amber-400 transition-colors">AUCA ÉCHECS</span>
+            <span class="font-display font-black text-sm sm:text-base tracking-wider text-white group-hover:text-amber-400 transition-colors">LE CERCLE DES ROIS</span>
             <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-500/40">Annaba 🇩🇿</span>
           </div>
-          <span class="font-arabic font-bold text-[11px] sm:text-xs text-amber-400/90 leading-tight">النادي الرياضي أمل اتحاد أشبال عنابة</span>
+          <span class="font-arabic font-bold text-[11px] sm:text-xs text-amber-400/90 leading-tight">نادي حلقة الملوك للشطرنج — عنابة</span>
         </div>
       </a>
 
@@ -200,27 +206,27 @@
           <span class="text-base">🇩🇿</span>
           <span class="font-arabic font-bold text-sm">ملحمة الشطرنج بمناسبة ذكرى أول نوفمبر 1954 الخالدة</span>
           <span class="text-slate-500 hidden sm:inline">|</span>
-          <span class="text-amber-400 font-bold hidden sm:inline">Entrée 100% Gratuite</span>
+          <span class="text-amber-400 font-bold hidden sm:inline">4ème Édition • 100% Gratuite</span>
         </div>
 
         <!-- Titre Principal de Bataille -->
         <h1 class="font-display font-black text-3xl sm:text-6xl lg:text-7xl text-white tracking-tight uppercase leading-tight mb-4 drop-shadow-2xl">
-          LA GRANDE BATAILLE DU <br class="hidden sm:inline">
-          <span class="gold-gradient-text drop-shadow-gold">1<sup class="lowercase text-2xl sm:text-4xl">er</sup> NOVEMBRE</span>
+          LE CERCLE DES ROIS 4 <br class="hidden sm:inline">
+          <span class="gold-gradient-text drop-shadow-gold">4<sup class="lowercase text-2xl sm:text-4xl">ème</sup> ÉDITION</span>
         </h1>
 
-        <!-- Devise du tournoi AUCA -->
+        <!-- Devise du tournoi Le Cercle des Rois -->
         <p class="text-base sm:text-2xl text-emerald-300 font-semibold italic max-w-3xl mx-auto mb-2 drop-shadow">
-          « Les échecs au service de la mémoire de la glorieuse Révolution »
+          « Grande Confrontation Échiquéenne en Hommage au 1er Novembre »
         </p>
 
         <!-- Titre Arabe solennel -->
         <p class="font-arabic font-extrabold text-sm sm:text-xl text-amber-300/90 max-w-xl mx-auto mb-6">
-          دورة الشطرنج الخاطف (بليتز) — النظام السويسري 7 جولات
+          دورة حلقة الملوك 4 — الشطرنج الخاطف (بليتز) 7 جولات بالنظام السويسري
         </p>
         
         <p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto mb-8 bg-slate-950/60 backdrop-blur-sm p-3 rounded-2xl border border-white/10">
-          Organisé par le <strong class="text-white font-bold">Club Sportif AUCA – Annaba</strong> dans l'arène feutrée du <strong class="text-amber-400 font-bold">Café Dardara</strong>. Que les meilleurs stratèges s'affrontent !
+          Organisé par <strong class="text-white font-bold">Le Cercle des Rois – Annaba</strong> dans l'arène feutrée du <strong class="text-amber-400 font-bold">Café Dardara</strong> le <strong class="text-emerald-400 font-bold">Jeudi 29 Octobre 2026</strong>. Que les meilleurs stratèges s'affrontent !
         </p>
 
         <!-- Grille des 4 Caractéristiques Majeures -->
@@ -260,13 +266,13 @@
           </div>
 
           <!-- Carte 4 : Inscription -->
-          <div class="glass-card p-4 rounded-2xl border-l-4 border-l-auca-royal hover:border-emerald-500 transition-all group shadow-lg">
-            <div class="flex items-center gap-2 mb-1.5 text-royal-400">
+          <div class="glass-card p-4 rounded-2xl border-l-4 border-l-amber-500 hover:border-emerald-500 transition-all group shadow-lg">
+            <div class="flex items-center gap-2 mb-1.5 text-amber-400">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"/></svg>
               <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Participation</span>
             </div>
             <h2 class="font-bold text-emerald-400 text-sm sm:text-base">100% Gratuite</h2>
-            <p class="text-xs text-slate-400 mt-0.5">Clôture à 20h00</p>
+            <p class="text-xs text-slate-400 mt-0.5">Jeudi 29 Octobre dès 19h</p>
           </div>
 
         </div>
@@ -316,9 +322,9 @@
                 <span>Identifiant FIDE :</span>
                 <strong class="font-mono text-amber-400 font-bold">7900198</strong>
               </p>
-              <a href="https://ratings.fide.com/profile/7900198" target="_blank" rel="noopener noreferrer" data-umami-event="fide-profil-azeddine-mehaibia" class="inline-flex items-center gap-1 text-[11px] text-emerald-400 hover:text-emerald-300 mt-1 font-semibold group/link">
+              <a href="https://ratings.fide.com/profile/7900198" target="_blank" rel="noopener noreferrer" data-umami-event="fide-profil-azeddine-mehaibia" class="inline-flex items-center gap-1.5 text-xs text-emerald-400 hover:text-emerald-300 py-2 px-3 rounded-lg bg-emerald-950/40 hover:bg-emerald-950/80 border border-emerald-500/20 transition-all font-semibold group/link mt-2 min-h-[44px]">
                 <span>Profil officiel FIDE</span>
-                <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                <svg class="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
               </a>
             </div>
           </div>
@@ -337,9 +343,9 @@
                 <span>Identifiant FIDE :</span>
                 <strong class="font-mono text-emerald-300 font-bold">7903413</strong>
               </p>
-              <a href="https://ratings.fide.com/profile/7903413" target="_blank" rel="noopener noreferrer" data-umami-event="fide-profil-lakhdar-benlaid" class="inline-flex items-center gap-1 text-[11px] text-emerald-400 hover:text-emerald-300 mt-1 font-semibold group/link">
+              <a href="https://ratings.fide.com/profile/7903413" target="_blank" rel="noopener noreferrer" data-umami-event="fide-profil-lakhdar-benlaid" class="inline-flex items-center gap-1.5 text-xs text-emerald-400 hover:text-emerald-300 py-2 px-3 rounded-lg bg-emerald-950/40 hover:bg-emerald-950/80 border border-emerald-500/20 transition-all font-semibold group/link mt-2 min-h-[44px]">
                 <span>Profil officiel FIDE</span>
-                <svg class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                <svg class="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
               </a>
             </div>
           </div>
@@ -357,11 +363,11 @@
         <div class="text-center mb-10">
           <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <span>Planning Officiel</span>
+            <span>Planning Officiel • Jeudi 29 Octobre 2026</span>
           </div>
           <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">Programme Horaire du Tournoi</h2>
           <p class="text-xs sm:text-sm text-slate-400 mt-1 max-w-xl mx-auto">
-            7 rondes disputées sous arbitrage rigoureux au Café Dardara. Clôture des inscriptions à 20 h 00.
+            7 rondes disputées sous arbitrage rigoureux au Café Dardara. Clôture impérative de l'émargement à 20 h 00.
           </p>
         </div>
 
@@ -375,8 +381,8 @@
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/></svg>
               </span>
               <div>
-                <h3 class="font-bold text-white text-sm sm:text-base">Accueil des participants & Confirmation des inscriptions</h3>
-                <p class="text-xs text-amber-400/90 font-medium">Clôture impérative de l'émargement à 20 h 00 précises</p>
+                <h3 class="font-bold text-white text-sm sm:text-base">Accueil des stratèges & Émargement officiel</h3>
+                <p class="text-xs text-amber-400/90 font-medium">Clôture impérative des inscriptions à 20 h 00 précises</p>
               </div>
             </div>
             <div class="text-right shrink-0">
@@ -395,7 +401,7 @@
                 <p class="text-[11px] text-slate-400">Tirage initial du système suisse</p>
               </div>
             </div>
-            <span class="font-mono text-xs text-slate-300 font-semibold px-2.5 py-1 rounded bg-slate-900/80">20 h 00 – 20 h 20</span>
+            <span class="font-mono text-xs text-slate-300 font-semibold px-2.5 py-1 rounded bg-slate-900/80">20 h 15 – 20 h 35</span>
           </div>
 
           <!-- Ronde 2 -->
@@ -407,7 +413,7 @@
                 <p class="text-[11px] text-slate-400">Deuxième série d'appariements</p>
               </div>
             </div>
-            <span class="font-mono text-xs text-slate-300 font-semibold px-2.5 py-1 rounded bg-slate-900/80">20 h 20 – 20 h 40</span>
+            <span class="font-mono text-xs text-slate-300 font-semibold px-2.5 py-1 rounded bg-slate-900/80">20 h 35 – 20 h 55</span>
           </div>
 
           <!-- Ronde 3 -->
@@ -419,7 +425,7 @@
                 <p class="text-[11px] text-slate-400">Montée en cadence du tableau</p>
               </div>
             </div>
-            <span class="font-mono text-xs text-slate-300 font-semibold px-2.5 py-1 rounded bg-slate-900/80">20 h 40 – 21 h 00</span>
+            <span class="font-mono text-xs text-slate-300 font-semibold px-2.5 py-1 rounded bg-slate-900/80">20 h 55 – 21 h 15</span>
           </div>
 
           <!-- Ronde 4 -->
@@ -431,7 +437,7 @@
                 <p class="text-[11px] text-slate-400">Mi-parcours du tournoi</p>
               </div>
             </div>
-            <span class="font-mono text-xs text-slate-300 font-semibold px-2.5 py-1 rounded bg-slate-900/80">21 h 00 – 21 h 20</span>
+            <span class="font-mono text-xs text-slate-300 font-semibold px-2.5 py-1 rounded bg-slate-900/80">21 h 15 – 21 h 35</span>
           </div>
 
           <!-- Ronde 5 -->
@@ -443,7 +449,7 @@
                 <p class="text-[11px] text-slate-400">Confrontations décisives du haut de tableau</p>
               </div>
             </div>
-            <span class="font-mono text-xs text-slate-300 font-semibold px-2.5 py-1 rounded bg-slate-900/80">21 h 20 – 21 h 40</span>
+            <span class="font-mono text-xs text-slate-300 font-semibold px-2.5 py-1 rounded bg-slate-900/80">21 h 35 – 21 h 55</span>
           </div>
 
           <!-- Ronde 6 -->
@@ -455,7 +461,7 @@
                 <p class="text-[11px] text-slate-400">Avant-dernière ronde sous haute tension</p>
               </div>
             </div>
-            <span class="font-mono text-xs text-slate-300 font-semibold px-2.5 py-1 rounded bg-slate-900/80">21 h 40 – 22 h 00</span>
+            <span class="font-mono text-xs text-slate-300 font-semibold px-2.5 py-1 rounded bg-slate-900/80">21 h 55 – 22 h 15</span>
           </div>
 
           <!-- Ronde 7 -->
@@ -464,10 +470,10 @@
               <span class="w-8 h-8 rounded-lg bg-emerald-600/30 text-emerald-300 flex items-center justify-center font-bold text-xs shrink-0 font-mono">R7</span>
               <div>
                 <h4 class="font-semibold text-white text-sm">7ᵉ ronde</h4>
-                <p class="text-[11px] text-slate-400">Ultime ronde pour le titre du 1er Novembre</p>
+                <p class="text-[11px] text-slate-400">Ultime ronde pour le titre du Cercle des Rois 4</p>
               </div>
             </div>
-            <span class="font-mono text-xs text-slate-300 font-semibold px-2.5 py-1 rounded bg-slate-900/80">22 h 00 – 22 h 20</span>
+            <span class="font-mono text-xs text-slate-300 font-semibold px-2.5 py-1 rounded bg-slate-900/80">22 h 15 – 22 h 35</span>
           </div>
 
           <!-- Clôture & Remise des Prix -->
@@ -477,11 +483,16 @@
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
               </span>
               <div>
-                <h3 class="font-bold text-white text-sm sm:text-base">Classement final, remise des trophées & clôture</h3>
-                <p class="text-xs text-slate-400">Proclamation des vainqueurs de la grande bataille échiquéenne</p>
+                <h3 class="font-bold text-white text-sm sm:text-base">Classement final, remise des trophées du Cercle des Rois & clôture</h3>
+                <p class="text-xs text-slate-400">Proclamation des vainqueurs de la 4ème édition en hommage au 1er Novembre</p>
               </div>
             </div>
             <div class="text-right shrink-0">
+              <span class="inline-block px-3 py-1 rounded-lg bg-slate-900 border border-slate-700 font-mono font-bold text-xs sm:text-sm text-emerald-300">
+                À partir de 22 h 40
+              </span>
+            </div>
+          </div>
               <span class="inline-block px-3 py-1 rounded-lg bg-slate-900 border border-slate-700 font-mono font-bold text-xs sm:text-sm text-emerald-300">
                 À partir de 22 h 20
               </span>
@@ -626,7 +637,7 @@
                   type="text" 
                   id="player-club" 
                   name="club" 
-                  placeholder="Ex : AUCA Annaba, BCE, Indépendant..."
+                  placeholder="Ex : Le Cercle des Rois, Indépendant, BCE..."
                   class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
                 >
               </div>
@@ -726,7 +737,7 @@
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
 
-      <!-- LE BADGE / PASS JOUEUR DU 1ER NOVEMBRE (Avec arrière-plan de bataille 9:16) -->
+      <!-- LE BADGE / PASS JOUEUR DU CERCLE DES ROIS 4 (Avec arrière-plan de bataille 9:16) -->
       <div id="player-pass-badge" class="rounded-3xl p-6 border-2 border-emerald-500/60 shadow-pass text-center relative overflow-hidden flag-border-top">
         
         <!-- Voile sombre intérieur pour garantir 100% de lisibilité sur l'image d'échecs -->
@@ -737,14 +748,14 @@
           <!-- En-tête Pass avec drapeau -->
           <div class="flex items-center justify-between pb-3 border-b border-white/15 mb-4 pt-1">
             <div class="flex items-center gap-2 text-left">
-              <img src="logo-auca-lion.jpg" alt="Logo AUCA" class="w-9 h-9 rounded-full object-cover ring-1 ring-emerald-400" onerror="this.src='https://aucaechecs.atlasforge.space/logo-auca-lion.jpg'">
+              <img src="logo-cercle-des-rois.png" alt="Blason Le Cercle des Rois" class="w-9 h-9 rounded-full object-cover ring-1 ring-emerald-400" onerror="this.src='logo-cercle-des-rois.svg'">
               <div>
-                <p class="font-display font-black text-xs text-white">AUCA ÉCHECS</p>
+                <p class="font-display font-black text-xs text-white">LE CERCLE DES ROIS</p>
                 <p class="text-[9px] text-emerald-400 font-bold uppercase tracking-wider">Pass Officiel Combattant</p>
               </div>
             </div>
             <span class="px-2 py-0.5 rounded bg-emerald-500/30 text-emerald-300 font-mono text-[10px] font-black border border-emerald-400/50">
-              🇩🇿 1er NOVEMBRE
+              🇩🇿 4ÈME ÉDITION • 1er NOVEMBRE
             </span>
           </div>
 
@@ -779,7 +790,7 @@
 
           <!-- Numéro de dossier & Code barre esthétique -->
           <div class="pt-2 border-t border-white/15 flex items-center justify-between text-slate-400">
-            <span id="pass-dossard-id" class="font-mono text-[11px] text-amber-400 font-bold">#AUCA-001</span>
+            <span id="pass-dossard-id" class="font-mono text-[11px] text-amber-400 font-bold">#CDR-001</span>
             <span class="font-mono text-[10px] tracking-widest opacity-70">||| | |||| | |||</span>
           </div>
 
@@ -824,7 +835,7 @@
       </button>
 
       <!-- Icône Cadenas & Blason -->
-      <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-tr from-emerald-600 via-amber-500 to-auca-royal p-0.5 shadow-patriotic flex items-center justify-center">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-tr from-emerald-600 via-amber-500 to-emerald-700 p-0.5 shadow-patriotic flex items-center justify-center">
         <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-2xl">
           🔒
         </div>
@@ -893,7 +904,7 @@
   </div>
 
   <!-- ========================================================================= -->
-  <!-- 8. MODALE ADMIN / CONSOLE DES ARBITRES AUCA (GESTION DES INSCRITS)         -->
+  <!-- 8. MODALE ADMIN / CONSOLE DES ARBITRES LE CERCLE DES ROIS (GESTION INSCRITS) -->
   <!-- ========================================================================= -->
   <div id="admin-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md hidden">
     <div class="relative w-full max-w-2xl bg-slate-900 border border-emerald-700/60 rounded-3xl p-6 shadow-2xl flex flex-col max-h-[90vh]">
@@ -903,7 +914,7 @@
         <div class="flex items-center gap-2.5">
           <span class="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-bold text-sm">♟️</span>
           <div>
-            <h3 class="font-bold text-white text-base">Espace Arbitres & Organisateurs AUCA</h3>
+            <h3 class="font-bold text-white text-base">Espace Arbitres & Organisateurs — Le Cercle des Rois</h3>
             <p class="text-xs text-slate-400">Gestion des inscriptions et export pour Swiss-Manager / Sevilla</p>
           </div>
         </div>
@@ -928,6 +939,7 @@
           <input 
             type="url" 
             id="google-sheet-url" 
+            aria-label="URL du Webhook Google Apps Script"
             placeholder="https://script.google.com/macros/s/.../exec"
             class="flex-grow px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white font-mono placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-emerald-400"
           >
@@ -978,7 +990,7 @@
       </div>
 
       <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-500 flex items-center justify-between shrink-0">
-        <span>AUCA Section Échecs — Arbitrage FIDE</span>
+        <span>Le Cercle des Rois — Section Arbitrage & Compétition</span>
         <span>Raccourci clavier : <kbd class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">Ctrl + Shift + A</kbd></span>
       </div>
 
@@ -986,7 +998,7 @@
   </div>
 
   <!-- ========================================================================= -->
-  <!-- 9. PIED DE PAGE OFFICIEL PATRIOTIQUE & AUCA                              -->
+  <!-- 9. PIED DE PAGE OFFICIEL PATRIOTIQUE & LE CERCLE DES ROIS                 -->
   <!-- ========================================================================= -->
   <footer class="bg-[#04070d] border-t-2 border-emerald-700/50 py-10 text-slate-400">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -995,19 +1007,19 @@
         
         <!-- Identité Club & Drapeau -->
         <div class="flex items-center gap-3.5 text-center md:text-left">
-          <div class="w-12 h-12 rounded-full p-0.5 bg-gradient-to-tr from-emerald-500 via-amber-400 to-auca-royal shadow-md shrink-0">
-            <img src="logo-auca-lion.jpg" alt="Logo AUCA" class="w-full h-full object-cover rounded-full bg-slate-900" onerror="this.src='https://aucaechecs.atlasforge.space/logo-auca-lion.jpg'">
+          <div class="w-12 h-12 rounded-full p-0.5 bg-gradient-to-tr from-emerald-500 via-amber-400 to-emerald-700 shadow-md shrink-0">
+            <img src="logo-cercle-des-rois.png" alt="Logo Le Cercle des Rois" class="w-full h-full object-cover rounded-full bg-slate-900" onerror="this.src='logo-cercle-des-rois.svg'">
           </div>
           <div>
-            <span class="font-display font-black text-base text-white tracking-wide block">AUCA ÉCHECS ANNABA 🇩🇿</span>
-            <span class="text-xs text-amber-400 font-arabic font-bold block">النادي الرياضي أمل اتحاد أشبال عنابة</span>
+            <span class="font-display font-black text-base text-white tracking-wide block">LE CERCLE DES ROIS — ANNABA 🇩🇿</span>
+            <span class="text-xs text-amber-400 font-arabic font-bold block">نادي حلقة الملوك للشطرنج — عنابة</span>
           </div>
         </div>
 
         <!-- Liens & Espace Arbitres -->
         <div class="flex flex-wrap items-center justify-center gap-3">
-          <a href="https://aucaechecs.atlasforge.space" target="_blank" rel="noopener noreferrer" data-umami-event="footer-auca-official-site" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-semibold text-slate-300 hover:text-white transition-colors">
-            🌐 Site Officiel du Club
+          <a href="#inscription" data-umami-event="footer-sinscrire-click" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-semibold text-slate-300 hover:text-white transition-colors">
+            ♟️ S'inscrire au Tournoi
           </a>
           <button onclick="openAdminModal()" class="px-4 py-2.5 rounded-xl bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-700/60 text-xs font-semibold text-emerald-300 hover:text-white transition-colors">
             🔒 Espace Arbitres & Inscriptions Cloud
@@ -1017,7 +1029,7 @@
       </div>
 
       <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
-        <p>© 2026 Club Sportif Amal Itihad Achbal Annaba (AUCA). Tous droits réservés.</p>
+        <p>© 2026 Le Cercle des Rois (Annaba). Tous droits réservés.</p>
         <p class="font-arabic text-emerald-500/90 font-bold">عاشت الجزائر حرة مستقلة • المجد والخلود لشهدائنا الأبرار</p>
       </div>
 
@@ -1029,8 +1041,10 @@
   <!-- ========================================================================= -->
   <script>
     // Configuration de la base de données Cloud
-    const STORAGE_KEY = 'auca_tournament_registrations';
-    const GOOGLE_SHEET_KEY = 'auca_google_sheet_url';
+    const STORAGE_KEY = 'cercle_des_rois_registrations';
+    const LEGACY_STORAGE_KEY = 'auca_tournament_registrations';
+    const GOOGLE_SHEET_KEY = 'cercle_des_rois_google_sheet_url';
+    const LEGACY_SHEET_KEY = 'auca_google_sheet_url';
     // URL officielle de votre Google Sheet Cloud (100% active et testée)
     const DEFAULT_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxX_cs2z3rMrEnmmCWy5T72wGUqAIZV2AqcfExgigcXSaDedXUDJxM8g419NZp-rM59/exec'; 
 
@@ -1043,7 +1057,7 @@
     });
 
     document.addEventListener('DOMContentLoaded', () => {
-      const savedUrl = localStorage.getItem(GOOGLE_SHEET_KEY) || DEFAULT_WEBHOOK_URL;
+      const savedUrl = localStorage.getItem(GOOGLE_SHEET_KEY) || localStorage.getItem(LEGACY_SHEET_KEY) || DEFAULT_WEBHOOK_URL;
       if (savedUrl) {
         const input = document.getElementById('google-sheet-url');
         if (input) input.value = savedUrl;
@@ -1086,7 +1100,7 @@
       btnSpinner.classList.remove('hidden');
 
       const registrationData = {
-        id: 'AUCA-' + String(Math.floor(Math.random() * 900) + 100),
+        id: 'CDR-' + String(Math.floor(Math.random() * 900) + 100),
         timestamp: new Date().toLocaleString('fr-DZ'),
         name: name,
         firstname: firstname || '-',
@@ -1128,7 +1142,7 @@
         body: JSON.stringify(registrationData)
       }).catch(() => {});
 
-      const targetSheetUrl = localStorage.getItem(GOOGLE_SHEET_KEY) || DEFAULT_WEBHOOK_URL;
+      const targetSheetUrl = localStorage.getItem(GOOGLE_SHEET_KEY) || localStorage.getItem(LEGACY_SHEET_KEY) || DEFAULT_WEBHOOK_URL;
       if (targetSheetUrl) {
         fetch(targetSheetUrl, {
           method: 'POST',
@@ -1141,8 +1155,16 @@
       }
     }
 
+    function getLocalRegistrations() {
+      const current = localStorage.getItem(STORAGE_KEY);
+      if (current) return JSON.parse(current);
+      const legacy = localStorage.getItem(LEGACY_STORAGE_KEY);
+      if (legacy) return JSON.parse(legacy);
+      return [];
+    }
+
     function saveToLocalStorage(data) {
-      const currentList = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      const currentList = getLocalRegistrations();
       currentList.unshift(data);
       localStorage.setItem(STORAGE_KEY, JSON.stringify(currentList));
     }
@@ -1199,7 +1221,7 @@
         useCORS: true
       }).then(canvas => {
         const link = document.createElement('a');
-        link.download = `Pass-AUCA-1erNovembre-${document.getElementById('pass-dossard-id').textContent.replace('#', '')}.png`;
+        link.download = `Pass-CercleDesRois-4-${document.getElementById('pass-dossard-id').textContent.replace('#', '')}.png`;
         link.href = canvas.toDataURL('image/png');
         link.click();
       }).catch(err => {
@@ -1213,8 +1235,8 @@
       }
 
       const shareData = {
-        title: "Tournoi d'Échecs du 1er Novembre 🇩🇿 - AUCA Annaba",
-        text: "Je participe à la Grande Bataille d'Échecs du 1er Novembre au Café Dardara à Annaba ! Inscription gratuite ici :",
+        title: "Le Cercle des Rois 4 🇩🇿 — Tournoi d'Échecs",
+        text: "Je participe au tournoi Le Cercle des Rois 4 (Hommage au 1er Novembre) au Café Dardara à Annaba ! Inscription gratuite ici :",
         url: window.location.href
       };
 
@@ -1227,7 +1249,7 @@
     }
 
     const ADMIN_PASSWORD = 'twa7achnakalebra';
-    const ADMIN_AUTH_KEY = 'auca_admin_auth_status';
+    const ADMIN_AUTH_KEY = 'cercle_admin_auth_status';
 
     function openAdminModal() {
       if (sessionStorage.getItem(ADMIN_AUTH_KEY) === 'authenticated') {
@@ -1319,7 +1341,7 @@
     }
 
     function renderAdminTable() {
-      const list = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      const list = getLocalRegistrations();
       const tbody = document.getElementById('admin-table-body');
       const count = document.getElementById('admin-count');
 
@@ -1359,7 +1381,7 @@
     }
 
     function exportToCSV() {
-      const list = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      const list = getLocalRegistrations();
       if (list.length === 0) {
         alert('Aucune inscription à exporter.');
         return;
@@ -1373,13 +1395,14 @@
       const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
-      link.download = `Inscriptions_AUCA_1erNovembre_${new Date().toISOString().slice(0, 10)}.csv`;
+      link.download = `Inscriptions_CercleDesRois_4_${new Date().toISOString().slice(0, 10)}.csv`;
       link.click();
     }
 
     function clearAllRegistrations() {
       if (confirm('Êtes-vous sûr de vouloir réinitialiser la liste locale des inscrits ?')) {
         localStorage.removeItem(STORAGE_KEY);
+        localStorage.removeItem(LEGACY_STORAGE_KEY);
         renderAdminTable();
       }
     }

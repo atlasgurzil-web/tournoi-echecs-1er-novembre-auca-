@@ -36,7 +36,7 @@ export default async function handler(req, res) {
     };
 
     const sanitizedPayload = {
-      id: sanitize(data.id || 'AUCA-' + Math.floor(Math.random() * 900 + 100), 20),
+      id: sanitize(data.id || 'CDR-' + Math.floor(Math.random() * 900 + 100), 20),
       timestamp: sanitize(data.timestamp || new Date().toISOString(), 35),
       name: sanitize(data.name, 80),
       firstname: sanitize(data.firstname, 80),

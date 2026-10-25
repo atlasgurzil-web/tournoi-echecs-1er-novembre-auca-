@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="40%" stop-color="#F59E0B"/>
+      <stop offset="70%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#92400E"/>
+    </linearGradient>
+    <linearGradient id="goldLight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#FEF08A"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#008744"/>
+      <stop offset="50%" stop-color="#006233"/>
+      <stop offset="100%" stop-color="#004524"/>
+    </linearGradient>
+    <radialGradient id="darkCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="70%" stop-color="#060A12"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </radialGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Paths for Curved Text -->
+    <!-- Top Arc (Clockwise for readable text) -->
+    <path id="textArcTop" d="M 65 250 A 185 185 0 0 1 435 250" fill="none"/>
+    <!-- Bottom Arc (Clockwise from bottom left to bottom right) -->
+    <path id="textArcBottom" d="M 425 250 A 175 175 0 0 1 75 250" fill="none"/>
+  </defs>
+
+  <!-- 1. Outer Gold Bezel -->
+  <circle cx="250" cy="250" r="242" fill="url(#goldGrad)" stroke="#78350F" stroke-width="2"/>
+  <circle cx="250" cy="250" r="236" fill="none" stroke="#FEF08A" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- 2. Algerian Green Ring -->
+  <circle cx="250" cy="250" r="230" fill="url(#greenGrad)" stroke="url(#goldGrad)" stroke-width="4"/>
+
+  <!-- 3. Arched Text Around the Ring -->
+  <text font-family="'Cinzel', 'Trajan Pro', 'Georgia', serif" font-weight="900" font-size="25" fill="#FFFFFF" letter-spacing="4" filter="drop-shadow(0 2px 3px rgba(0,0,0,0.8))">
+    <textPath href="#textArcTop" startOffset="50%" text-anchor="middle">
+      LE CERCLE DES ROIS
+    </textPath>
+  </text>
+  <text font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" fill="#FDE68A" letter-spacing="3" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.8))">
+    <textPath href="#textArcBottom" startOffset="50%" text-anchor="middle">
+      ★ ANNABA • 4ÈME ÉDITION ★
+    </textPath>
+  </text>
+
+  <!-- 4. Inner Gold Ring & Dark Medallion -->
+  <circle cx="250" cy="250" r="176" fill="none" stroke="url(#goldGrad)" stroke-width="5"/>
+  <circle cx="250" cy="250" r="172" fill="url(#darkCore)" stroke="#D97706" stroke-width="1"/>
+
+  <!-- Subtle Ray bursts in dark core -->
+  <g stroke="#F59E0B" stroke-width="0.8" opacity="0.15">
+    <line x1="250" y1="250" x2="250" y2="85"/>
+    <line x1="250" y1="250" x2="366" y2="133"/>
+    <line x1="250" y1="250" x2="415" y2="250"/>
+    <line x1="250" y1="250" x2="366" y2="366"/>
+    <line x1="250" y1="250" x2="250" y2="415"/>
+    <line x1="250" y1="250" x2="133" y2="366"/>
+    <line x1="250" y1="250" x2="85" y2="250"/>
+    <line x1="250" y1="250" x2="133" y2="133"/>
+  </g>
+
+  <!-- 5. Golden Laurel Leaves (Left and Right) -->
+  <g fill="url(#goldGrad)" stroke="#78350F" stroke-width="0.5" opacity="0.9">
+    <!-- Left Laurel -->
+    <path d="M 125 240 Q 110 215 130 195 Q 138 215 125 240 Z"/>
+    <path d="M 132 205 Q 120 180 145 165 Q 150 185 132 205 Z"/>
+    <path d="M 148 175 Q 140 150 168 140 Q 170 162 148 175 Z"/>
+    <path d="M 120 280 Q 105 295 125 315 Q 133 295 120 280 Z"/>
+    <path d="M 128 310 Q 118 330 142 345 Q 145 325 128 310 Z"/>
+
+    <!-- Right Laurel -->
+    <path d="M 375 240 Q 390 215 370 195 Q 362 215 375 240 Z"/>
+    <path d="M 368 205 Q 380 180 355 165 Q 350 185 368 205 Z"/>
+    <path d="M 352 175 Q 360 150 332 140 Q 330 162 352 175 Z"/>
+    <path d="M 380 280 Q 395 295 375 315 Q 367 295 380 280 Z"/>
+    <path d="M 372 310 Q 382 330 358 345 Q 355 325 372 310 Z"/>
+  </g>
+
+  <!-- 6. Chess King Piece (Detailed, Royal Gold & Ivory) -->
+  <g id="kingPiece">
+    <!-- Plinth / Base -->
+    <path d="M 175 375 L 325 375 L 315 355 L 185 355 Z" fill="url(#goldGrad)" stroke="#78350F" stroke-width="1.5"/>
+    <rect x="195" y="342" width="110" height="13" rx="3" fill="url(#goldLight)" stroke="#92400E" stroke-width="1"/>
+    
+    <!-- Torso Column -->
+    <path d="M 205 342 Q 220 260 226 215 L 274 215 Q 280 260 295 342 Z" fill="url(#goldGrad)" stroke="#78350F" stroke-width="1.5"/>
+    <!-- Collar Ring -->
+    <ellipse cx="250" cy="215" rx="32" ry="7" fill="url(#goldLight)" stroke="#92400E" stroke-width="1.5"/>
+
+    <!-- King Head / Base of Crown -->
+    <ellipse cx="250" cy="188" rx="28" ry="18" fill="url(#goldGrad)" stroke="#78350F" stroke-width="1.5"/>
+
+    <!-- Majestic Royal Crown atop King -->
+    <path d="M 216 186 L 210 135 L 232 155 L 250 120 L 268 155 L 290 135 L 284 186 Z" fill="url(#goldLight)" stroke="#78350F" stroke-width="2" filter="url(#goldGlow)"/>
+
+    <!-- Royal Crown Jewels (Algerian Red & Green) -->
+    <circle cx="250" cy="158" r="4.5" fill="#D21034" stroke="#FFFFFF" stroke-width="1"/>
+    <circle cx="228" cy="170" r="3.5" fill="#008744" stroke="#FFFFFF" stroke-width="0.8"/>
+    <circle cx="272" cy="170" r="3.5" fill="#008744" stroke="#FFFFFF" stroke-width="0.8"/>
+
+    <!-- Cross Finial of the King -->
+    <g fill="url(#goldLight)" stroke="#78350F" stroke-width="1.5">
+      <rect x="246" y="96" width="8" height="26" rx="1.5"/>
+      <rect x="238" y="104" width="24" height="7" rx="1.5"/>
+    </g>
+
+    <!-- Algerian Flag Crescent and Star Badge at the Center Plinth of King -->
+    <g transform="translate(250, 290)">
+      <!-- Circle backdrop -->
+      <circle cx="0" cy="0" r="22" fill="#060A12" stroke="url(#goldGrad)" stroke-width="1.5"/>
+      <!-- Red Crescent -->
+      <path d="M 0 -13 A 13 13 0 1 0 13 0 A 10 10 0 1 1 0 -13 Z" fill="#D21034"/>
+      <!-- Red Star -->
+      <polygon points="4,-4 7,-12 10,-4 18,-4 11,1 14,9 7,4 0,9 3,1 -4,-4" fill="#D21034" transform="scale(0.55) translate(14, -6)"/>
+    </g>
+  </g>
+
+  <!-- 7. Subtle Sparkles / Stars -->
+  <polygon points="250,85 252,90 257,92 252,94 250,99 248,94 243,92 248,90" fill="#FEF08A"/>
+</svg>

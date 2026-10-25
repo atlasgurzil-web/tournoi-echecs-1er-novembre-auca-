@@ -1,19 +1,20 @@
 /**
  * ==============================================================================
- * SCRIPT GOOGLE APPS SCRIPT POUR LE TOURNOI D'ÉCHECS DU 1ER NOVEMBRE (AUCA)
+ * SCRIPT GOOGLE APPS SCRIPT POUR LE TOURNOI LE CERCLE DES ROIS 4 (ANNABA)
+ * Hommage au 1er Novembre 1954
  * ==============================================================================
  * 
  * Instructions de mise en place en 2 minutes :
  * 
  * 1. Ouvrez Google Sheets (https://sheets.google.com) et créez une nouvelle feuille.
- * 2. Renommez la feuille en "Inscriptions Tournoi 1er Novembre AUCA".
+ * 2. Renommez la feuille en "Inscriptions Le Cercle des Rois 4".
  * 3. En haut, cliquez sur : Extensions > Apps Script.
  * 4. Supprimez tout le code existant dans l'éditeur et collez le script ci-dessous.
  * 5. Cliquez sur l'icône de disquette (Enregistrer).
  * 6. Cliquez sur le bouton bleu "Déployer" en haut à droite > "Nouveau déploiement".
  * 7. Dans le type de déploiement (icône d'engrenage), choisissez "Application Web".
  * 8. Remplissez les champs :
- *    - Description : Webhook Inscriptions AUCA
+ *    - Description : Webhook Inscriptions Le Cercle des Rois
  *    - Exécuter en tant que : Moi (votre adresse email Google)
  *    - Qui a accès : Tout le monde (Anyone)  <--- IMPORTANT pour que la page web puisse envoyer les données
  * 9. Cliquez sur "Déployer", autorisez les accès.
@@ -42,9 +43,9 @@ function doPost(e) {
         "Identifiant FIDE / Elo"
       ]);
       
-      // Mise en forme de la première ligne
+      // Mise en forme de la première ligne (Vert officiel)
       var headerRange = sheet.getRange(1, 1, 1, 9);
-      headerRange.setBackground("#0B4EA2");
+      headerRange.setBackground("#006233");
       headerRange.setFontColor("#FFFFFF");
       headerRange.setFontWeight("bold");
     }
@@ -54,7 +55,7 @@ function doPost(e) {
     var data = JSON.parse(rawData);
     
     sheet.appendRow([
-      data.id || "AUCA-" + Math.floor(Math.random() * 1000),
+      data.id || "CDR-" + Math.floor(Math.random() * 1000),
       data.timestamp || new Date().toLocaleString(),
       data.name || "",
       data.firstname || "",
@@ -78,6 +79,6 @@ function doPost(e) {
 
 function doGet(e) {
   return ContentService
-    .createTextOutput("Le Webhook Google Apps Script du Tournoi d'Échecs AUCA fonctionne parfaitement !")
+    .createTextOutput("Le Webhook Google Apps Script du Tournoi Le Cercle des Rois 4 fonctionne parfaitement !")
     .setMimeType(ContentService.MimeType.TEXT);
 }

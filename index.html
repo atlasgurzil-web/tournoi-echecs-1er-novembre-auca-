@@ -1106,34 +1106,14 @@
         });
       }
 
-      // 1. Sauvegarde locale sur le smartphone pour générer le Pass sans délai
+      // 1. Sauvegarde locale immédiate sur le smartphone
       saveToLocalStorage(registrationData);
 
-      // 2. Envoi vers l'API Serverless Vercel (/api/register)
-      try {
-        await fetch('/api/register', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(registrationData)
-        });
-      } catch (err) {
-        // En local ou si l'API Vercel n'a pas encore de variables, on continue
-        console.info('API Vercel /api/register transmise.');
-      }
-
-      // 3. Envoi direct vers Google Sheets Webhook si configuré
-      const targetSheetUrl = localStorage.getItem(GOOGLE_SHEET_KEY) || DEFAULT_WEBHOOK_URL;
-      if (targetSheetUrl) {
-        try {
-          await fetch(targetSheetUrl, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(registrationData)
-          });
-        } catch (err) {
-          console.warn('Erreur transmission Google Sheets direct :', err);
-        }
+      // 2. Affichage instantané du Pass Joueur (Expérience utilisateur 0ms)
+      displayPlayerPass(registrationData);
+      document.getElementById('registration-form').reset();
+      if (sessionStorage.getItem(ADMIN_AUTH_KEY) === 'authenticated') {
+        renderAdminTable();
       }
 
       submitBtn.disabled = false;
@@ -1141,11 +1121,24 @@
       btnIcon.classList.remove('hidden');
       btnSpinner.classList.add('hidden');
 
-      document.getElementById('registration-form').reset();
-      if (sessionStorage.getItem(ADMIN_AUTH_KEY) === 'authenticated') {
-        renderAdminTable();
+      // 3. Synchronisation Cloud Vercel & Google Sheets en arrière-plan
+      fetch('/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(registrationData)
+      }).catch(() => {});
+
+      const targetSheetUrl = localStorage.getItem(GOOGLE_SHEET_KEY) || DEFAULT_WEBHOOK_URL;
+      if (targetSheetUrl) {
+        fetch(targetSheetUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(registrationData)
+        }).catch(err => {
+          console.warn('Erreur transmission Google Sheets direct :', err);
+        });
       }
-      displayPlayerPass(registrationData);
     }
 
     function saveToLocalStorage(data) {

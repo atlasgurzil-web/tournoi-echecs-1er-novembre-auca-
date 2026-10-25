@@ -75,7 +75,7 @@ Le projet est configuré nativement pour Vercel grâce au fichier [`vercel.json`
 2. Connectez votre compte GitHub et importez ce dépôt (ou glissez-déposez le dossier complet sur le CLI Vercel `npx vercel`).
 3. Vercel va automatiquement détecter le site statique et l'API Serverless.
 4. Cliquez sur **Deploy**.
-5. Vous obtenez immédiatement votre lien public HTTPS sécurisé (ex: `https://cercle-des-rois-4.vercel.app`), prêt à être partagé en Story Instagram !
+5. Vous obtenez immédiatement votre lien public HTTPS sécurisé : `https://tournoi-echecs-1er-novembre-auca.vercel.app`, prêt à être partagé en Story Instagram ! (Lien direct formulaire : `https://tournoi-echecs-1er-novembre-auca.vercel.app/#inscription`)
 
 ---
 
